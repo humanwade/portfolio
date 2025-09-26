@@ -91,7 +91,8 @@ function Projects() {
 
             <div className="project-row">
                 <div className="project-text">
-                    <h2>Smart Health Management Service – "Calorie Cut!"</h2>
+                    <h2>Smart Health Management Service <br />
+                    "Calories Cut!"</h2>
                     <p>
                         A project that leverages <strong>AI</strong> and <strong>public datasets</strong> to deliver a smart health management service.
                         Users can upload food photos to automatically calculate <strong>calories</strong> and <strong>macronutrients</strong>, receive personalized diet recommendations, and track their health progress over time.
