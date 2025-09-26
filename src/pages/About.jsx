@@ -1,4 +1,6 @@
 import "./About.css";
+import profileMain from "../assets/profileMain.jpg";
+import resumeFile from "../assets/resume.pdf";
 
 function About() {
     return (
@@ -8,7 +10,7 @@ function About() {
 
             <div className="about-header">
                 <div className="about-photo">
-                    <img src="/profileMain.jpg" alt="Seounghoon Jung" />
+                    <img src={profileMain} alt="Seounghoon Jung" />
                 </div>
 
                 <div className="about-intro">
@@ -19,7 +21,7 @@ function About() {
                     </p>
 
                     <div className="resume-button">
-                        <a href="/resume.pdf" target="_blank" rel="noreferrer">
+                        <a href={resumeFile} target="_blank" rel="noreferrer">
                             View My Resume
                         </a>
                     </div>

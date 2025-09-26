@@ -1,4 +1,7 @@
 import "./Projects.css";
+import pixarGallery from "../assets/projectFiles/pixarGallery.png";
+import kiosk from "../assets/projectFiles/kiosk.png";
+
 
 function Projects() {
     return (
@@ -36,7 +39,7 @@ function Projects() {
 
                 <div className="project-image">
                     <a href="https://humanwade.github.io/PixarMovieGallery/" target="_blank" rel="noopener noreferrer">
-                        <img src="/projectFiles/movie.png" alt="Pixar Movie Gallery Screenshot" />
+                        <img src={pixarGallery} alt="Pixar Movie Gallery Screenshot" />
                         <p className="demo-link"> &lt; Click to Demo &gt; </p>
                     </a>
                 </div>
@@ -75,17 +78,11 @@ function Projects() {
                 </div>
 
                 <div className="project-image">
-                    <a href="/projectFiles/kiosk.jar" download>
-                        <img
-                            src="/projectFiles/kiosk.png"
-                            alt="Java Kiosk Application Screenshot"
-                        />
+                    <a href="/portfolio/projectFiles/kiosk.jar" download>
+                        <img src={kiosk} alt="Java Kiosk Application Screenshot" />
                     </a>
-                    <a
-                        href="/projectFiles/kiosk.jar"
-                        download
-                        className="project-link"
-                    >
+
+                    <a href="/portfolio/projectFiles/kiosk.jar" download className="project-link">
                         &lt; Download JAR &gt;
                     </a>
                 </div>
