@@ -1,7 +1,7 @@
 import "./Projects.css";
 import pixarGallery from "../assets/projectFiles/pixarGallery.png";
 import kiosk from "../assets/projectFiles/kiosk.png";
-
+import caloriesCut from "../assets/projectFiles/caloriesCut.png";
 
 function Projects() {
     return (
@@ -91,23 +91,62 @@ function Projects() {
 
             <div className="project-row">
                 <div className="project-text">
-                    <h2>Portfolio Website</h2>
+                    <h2>Smart Health Management Service – "Calorie Cut!"</h2>
                     <p>
-                        A fully responsive portfolio website showcasing projects, skills, and contact info.
-                        Designed with React and styled with custom CSS, featuring smooth animations.
+                        A project that leverages <strong>AI</strong> and <strong>public datasets</strong> to deliver a smart health management service.
+                        Users can upload food photos to automatically calculate <strong>calories</strong> and <strong>macronutrients</strong>, receive personalized diet recommendations, and track their health progress over time.
                     </p>
-                    <p className="tech-stack">
-                        <strong>Tech:</strong> React, JavaScript, CSS3
-                    </p>
-                    <a href="https://your-portfolio-link.com" target="_blank" rel="noreferrer" className="project-link">
-                        View Project
+
+                    <h4>Technologies Used:</h4>
+                    <ul>
+                        <li><strong>Front-End:</strong> JSP, jQuery, AJAX, Chart.js</li>
+                        <li><strong>Back-End:</strong> Java Spring (Controller, Mapper), MyBatis</li>
+                        <li><strong>Database:</strong> MySQL</li>
+                        <li><strong>Machine Learning:</strong> Python, TensorFlow (CNN for food image recognition)</li>
+                        <li><strong>APIs & Crawling:</strong> YouTube API, Selenium, DeepSearch API</li>
+                    </ul>
+
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>AI-based food image recognition for calorie & nutrition analysis</li>
+                        <li>Personalized diet, recipe, and workout recommendations</li>
+                        <li>Daily diary with calorie & macronutrient visualization (Chart.js)</li>
+                        <li>News and exercise video crawling with real-time updates</li>
+                        <li>Admin dashboard for data, user, and content management</li>
+                    </ul>
+
+                    <a
+                        href="https://github.com/humanwade/finalproject"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project-link"
+                    >
+                        View Repository
                     </a>
                 </div>
 
                 <div className="project-image">
-                    <img src="/project3.jpg" alt="Portfolio Website" />
+                    <a
+                        href="https://youtu.be/qFRlDxpOGi0"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src={caloriesCut}
+                            alt="Smart Health Management Service Screenshot"
+                        />
+                    </a>
+                    <a
+                        href="https://youtu.be/qFRlDxpOGi0"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="project-link"
+                    >
+                        &lt; Watch Demo &gt;
+                    </a>
                 </div>
             </div>
+
         </div>
     );
 }
