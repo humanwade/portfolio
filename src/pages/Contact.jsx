@@ -1,3 +1,8 @@
+// Contact.jsx
+// This component renders the "Contact Me" page of the portfolio website.
+// It displays contact information and a contact form where users can send a message.
+// The form uses React state for controlled inputs and navigates back to Home after submission.
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Contact.css";
@@ -5,6 +10,7 @@ import "./Contact.css";
 function Contact() {
     const navigate = useNavigate();
 
+    // Form state: stores user input values
     const [form, setForm] = useState({
         firstName: "",
         lastName: "",
@@ -13,6 +19,7 @@ function Contact() {
         message: ""
     });
 
+    // Update form state when input changes
     const handleChange = (event) => {
         setForm({
             ...form,
@@ -20,18 +27,21 @@ function Contact() {
         });
     };
 
+    // Handle form submission
     const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log("Form submitted", form);
-        alert("Thank you for your message!");
-        navigate("/");
+        event.preventDefault();               // Prevent page reload
+        console.log("Form submitted", form);  // Debug log
+        alert("Thank you for your message!"); // Feedback to user
+        navigate("/");                        // Redirect to home page
     };
 
     return (
         <div className="contact-page">
+            {/* Page Title */}
             <h1 className="contact-title">CONTACT ME</h1>
             <div className="contact-divider"></div>
 
+            {/* Contact Info Section */}
             <div className="contact-info">
                 <p><strong>📞 Phone:</strong> 647-217-7377</p>
                 <p><strong>📧 Email:</strong> wadeseounghoon@gmail.com</p>
@@ -43,7 +53,9 @@ function Contact() {
                 </p>
             </div>
 
+            {/* Contact Form Section */}
             <form className="contact-form" onSubmit={handleSubmit}>
+                {/* Row for first and last name */}
                 <div className="form-row">
                     <input 
                         type="text" 
@@ -62,6 +74,8 @@ function Contact() {
                         required 
                     />
                 </div>
+
+                {/* Row for contact number and email */}
                 <div className="form-row">
                     <input 
                         type="text" 
@@ -80,6 +94,8 @@ function Contact() {
                         required 
                     />
                 </div>
+
+                {/* Message field */}
                 <textarea 
                     name="message" 
                     placeholder="Your Message" 
@@ -89,6 +105,7 @@ function Contact() {
                     rows="4"
                 ></textarea>
 
+                {/* Submit button */}
                 <button type="submit">Submit</button>
             </form>
         </div>

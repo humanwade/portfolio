@@ -1,26 +1,36 @@
+// About.jsx
+// This component renders the "About Me" page of the portfolio website.
+// It introduces the user (profile photo, resume link), lists technical skills, 
+// and provides professional experience details. 
+// The layout is styled via About.css and uses responsive design for different devices.
+
 import "./About.css";
-import profileMain from "../assets/profileMain.jpg";
-import resumeFile from "../assets/resume.pdf";
+import profileMain from "../assets/profileMain.jpg";   // Profile photo
+import resumeFile from "../assets/resume.pdf";         // Resume PDF file
 
 function About() {
     return (
         <div className="about-page">
 
+            {/* Page Title */}
             <h1 className="title">ABOUT ME</h1>
 
+            {/* Header Section: Photo + Intro */}
             <div className="about-header">
                 <div className="about-photo">
+                    {/* Profile image */}
                     <img src={profileMain} alt="Seounghoon Jung" />
                 </div>
 
                 <div className="about-intro">
+                    {/* Short professional headline */}
                     <p className="headline">
                         Results-driven <strong>Junior Software Engineer</strong> with hands-on experience in <br />
                         JavaScript, React, and Node.js, specializing in scalable web applications
                         and responsive UI/UX.
                     </p>
 
-                    {/* resume button location */}
+                    {/* Resume button */}
                     <div className="resume-button">
                         <a href={resumeFile} target="_blank" rel="noreferrer">
                             View My Resume
@@ -29,9 +39,13 @@ function About() {
                 </div>
             </div>
 
+            {/* Technical Skills Section */}
             <section className="about-section">
                 <h2>TECHNICAL SKILLS</h2>
+
+                {/* Grid layout for skills categories */}
                 <div className="skills-grid">
+                    {/* Languages and Tools */}
                     <div className="skill-card">
                         <h3><strong>Languages / Tools</strong></h3>
                         <ul>
@@ -45,6 +59,8 @@ function About() {
                             <li>Node.js</li>
                         </ul>
                     </div>
+
+                    {/* Frameworks */}
                     <div className="skill-card">
                         <h3><strong>Frameworks</strong></h3>
                         <ul>
@@ -54,6 +70,8 @@ function About() {
                             <li>Hibernate</li>
                         </ul>
                     </div>
+
+                    {/* Databases */}
                     <div className="skill-card">
                         <h3><strong>Databases</strong></h3>
                         <ul>
@@ -62,6 +80,8 @@ function About() {
                             <li>MongoDB</li>
                         </ul>
                     </div>
+
+                    {/* Other Tools */}
                     <div className="skill-card">
                         <h3><strong>Other</strong></h3>
                         <ul>
@@ -74,9 +94,12 @@ function About() {
                 </div>
             </section>
 
+            {/* Professional Experience Section */}
             <section className="about-section">
                 <h2>EXPERIENCE</h2>
+
                 <div className="experience-grid">
+                    {/* Job 1 */}
                     <div className="skill-card">
                         <h3>Data Analyst, Platform Strategy Team</h3>
                         <p className="experience-date">
@@ -89,6 +112,8 @@ function About() {
                             <li>Improved CS tools by creating an ad-hoc query system enabling same-day responses</li>
                         </ul>
                     </div>
+
+                    {/* Job 2 */}
                     <div className="skill-card">
                         <h3>Procurement Specialist, International Procurement Team</h3>
                         <p className="experience-date">
