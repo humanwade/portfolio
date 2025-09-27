@@ -46,7 +46,6 @@
   line-height: 1.6;
 }
 
-/* resume 버튼 */
 .resume-button {
   margin-top: 1rem;
   display: flex;
@@ -71,7 +70,6 @@
   transform: scale(1.05);
 }
 
-/* Section */
 .about-section {
   margin-bottom: 2.5rem;
 }
@@ -83,7 +81,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* 카드 공통 */
 .card,
 .skill-card {
   background: #1a1a1a;
@@ -113,10 +110,6 @@
   line-height: 1.6;
 }
 
-/* ------------------------------
-   GRID LAYOUTS
-------------------------------- */
-
 /* Technical Skills */
 .skills-grid {
   display: grid;
@@ -137,11 +130,6 @@
   justify-content: center;
 }
 
-/* ------------------------------
-   RESPONSIVE BREAKPOINTS
-------------------------------- */
-
-/* 모바일 (최대 767px) */
 /* 모바일 (최대 767px) */
 @media (max-width: 767px) {
   .about-header {
@@ -177,11 +165,10 @@
     grid-template-columns: repeat(1, minmax(280px, 320px));
   }
 
-  /* 카드 내부 여백 줄이기 */
   .card,
   .skill-card {
     padding: 1rem;
-    font-size: 0.95rem; /* 글씨 조금 작게 */
+    font-size: 0.95rem; 
   }
 
   .card h3,
@@ -199,11 +186,11 @@
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, minmax(280px, 320px)); /* 2칸 */
+    grid-template-columns: repeat(2, minmax(280px, 320px)); 
   }
 
   .experience-grid {
-    grid-template-columns: repeat(1, minmax(560px, 600px)); /* 1칸 */
+    grid-template-columns: repeat(1, minmax(560px, 600px)); 
   }
 
   .resume-button {
@@ -214,16 +201,16 @@
 /* 태블릿 큰 구간 (992px ~ 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
   .about-header {
-    flex-direction: row; /* PC처럼 좌측 이미지 */
+    flex-direction: row; 
     text-align: left;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, minmax(280px, 320px)); /* 2칸 */
+    grid-template-columns: repeat(2, minmax(280px, 320px)); 
   }
 
   .experience-grid {
-    grid-template-columns: repeat(2, minmax(400px, 450px)); /* 카드 폭 줄임 */
+    grid-template-columns: repeat(2, minmax(400px, 450px)); 
   }
 
   .resume-button {
@@ -235,17 +222,17 @@
 /* PC (1200px 이상) */
 @media (min-width: 1200px) {
   .about-header {
-    flex-direction: row; /* 좌측 이미지 유지 */
+    flex-direction: row; 
     text-align: left;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(4, minmax(280px, 320px)); /* 4칸 */
+    grid-template-columns: repeat(4, minmax(280px, 320px)); 
     max-width: 1280px;
   }
 
   .experience-grid {
-    grid-template-columns: repeat(2, minmax(560px, 600px)); /* 2칸 */
+    grid-template-columns: repeat(2, minmax(560px, 600px)); 
     max-width: 1200px;
   }
 

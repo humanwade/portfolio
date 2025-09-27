@@ -3,7 +3,7 @@
   color: white;
   min-height: 100vh;
   padding: 3rem 2rem;
-  padding-right: 80px; /* ✅ 콘텐츠만 네비 피하기 */
+  padding-right: 80px; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -49,7 +49,7 @@
 .project-text {
   flex: 1;
   text-align: left;
-  padding-right: 1rem; /* 👉 네비게이션 겹침 방지 */
+  padding-right: 1rem; 
 }
 
 .project-text h2 {
@@ -63,7 +63,7 @@
 }
 
 .project-text ul {
-  padding-left: 1.2rem; /* 불렛 위치 통일 */
+  padding-left: 1.2rem; 
   margin: 0;
 }
 
@@ -118,17 +118,13 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-/* ------------------------------
-   RESPONSIVE BREAKPOINTS
-------------------------------- */
-
 /* 모바일 (최대 767px) */
 @media (max-width: 767px) {
   .projects-page {
   }
 
   .project-row {
-    flex-direction: column; /* 세로 배치 */
+    flex-direction: column; 
     text-align: left;
   }
 
@@ -205,6 +201,6 @@
   }
 
   .project-image img {
-    margin-right: 2rem; /* 이미지 네비와 겹치지 않게 */
+    margin-right: 2rem; 
   }
 }

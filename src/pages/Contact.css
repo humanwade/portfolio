@@ -112,14 +112,10 @@
   transform: scale(1.05);
 }
 
-/* ------------------------------
-   RESPONSIVE BREAKPOINTS
-------------------------------- */
-
 /* 모바일 (최대 767px) */
 @media (max-width: 767px) {
   .contact-title {
-    font-size: 1.8rem; /* 제목 줄임 */
+    font-size: 1.8rem; 
   }
 
   .contact-info {
@@ -132,7 +128,7 @@
   }
 
   .contact-form .form-row {
-    flex-direction: column; /* 인풋 세로 배치 */
+    flex-direction: column;
     gap: 0.5rem;
   }
 
@@ -174,5 +170,3 @@
     padding: 0.5rem 1.5rem;
   }
 }
-
-/* PC (1200px 이상) → 기존 크기 유지 */
