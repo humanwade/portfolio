@@ -17,7 +17,6 @@
                0 0 30px rgba(0,230,118,0.2);
 }
 
-
 .contact-divider {
   width: 80px;
   height: 3px;
@@ -112,3 +111,68 @@
   box-shadow: 0px 4px 12px rgba(0, 230, 118, 0.3);
   transform: scale(1.05);
 }
+
+/* ------------------------------
+   RESPONSIVE BREAKPOINTS
+------------------------------- */
+
+/* 모바일 (최대 767px) */
+@media (max-width: 767px) {
+  .contact-title {
+    font-size: 1.8rem; /* 제목 줄임 */
+  }
+
+  .contact-info {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .contact-form .form-row {
+    flex-direction: column; /* 인풋 세로 배치 */
+    gap: 0.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .contact-form button {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+/* 태블릿 (768px ~ 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contact-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-info {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* PC (1200px 이상) → 기존 크기 유지 */

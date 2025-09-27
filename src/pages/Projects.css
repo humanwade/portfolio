@@ -3,6 +3,7 @@
   color: white;
   min-height: 100vh;
   padding: 3rem 2rem;
+  padding-right: 80px; /* ✅ 콘텐츠만 네비 피하기 */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -47,6 +48,8 @@
 
 .project-text {
   flex: 1;
+  text-align: left;
+  padding-right: 1rem; /* 👉 네비게이션 겹침 방지 */
 }
 
 .project-text h2 {
@@ -57,6 +60,16 @@
 .project-text p {
   margin-bottom: 1rem;
   line-height: 1.6;
+}
+
+.project-text ul {
+  padding-left: 1.2rem; /* 불렛 위치 통일 */
+  margin: 0;
+}
+
+.project-text li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 .tech-stack {
@@ -76,7 +89,7 @@
   cursor: pointer;
   transition: transform 0.3s ease;
   display: block;
-  margin: 0 auto 1rem auto; 
+  margin: 0 auto 1rem auto;
 }
 
 .project-image img:hover {
@@ -87,7 +100,7 @@
 .demo-link {
   display: inline-block;
   margin-top: 0.5rem;
-  padding: 0.3rem 1rem; 
+  padding: 0.3rem 1rem;
   border: 2px solid #00e676;
   border-radius: 6px;
   color: #00e676;
@@ -103,4 +116,95 @@
   color: #111;
   border-color: #fff;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ------------------------------
+   RESPONSIVE BREAKPOINTS
+------------------------------- */
+
+/* 모바일 (최대 767px) */
+@media (max-width: 767px) {
+  .projects-page {
+  }
+
+  .project-row {
+    flex-direction: column; /* 세로 배치 */
+    text-align: left;
+  }
+
+  .project-text {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+}
+
+/* 태블릿 작은 구간 (768px ~ 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .projects-page {
+  }
+
+  .project-row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .project-text {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-right: 1.2rem;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+}
+
+/* 태블릿 큰 구간 (992px ~ 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .projects-page {
+  }
+
+  .project-row {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .project-text {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-right: 1.5rem;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+}
+
+/* PC (1200px 이상) */
+@media (min-width: 1200px) {
+  .projects-page {
+  }
+
+  .project-row {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .project-text {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
+  .project-image {
+    flex: 1;
+  }
+
+  .project-image img {
+    margin-right: 2rem; /* 이미지 네비와 겹치지 않게 */
+  }
 }

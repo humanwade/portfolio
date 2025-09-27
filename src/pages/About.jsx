@@ -20,6 +20,7 @@ function About() {
                         and responsive UI/UX.
                     </p>
 
+                    {/* 👉 버튼은 headline 아래에 위치 */}
                     <div className="resume-button">
                         <a href={resumeFile} target="_blank" rel="noreferrer">
                             View My Resume
@@ -30,7 +31,6 @@ function About() {
 
             <section className="about-section">
                 <h2>TECHNICAL SKILLS</h2>
-
                 <div className="skills-grid">
                     <div className="skill-card">
                         <h3><strong>Languages / Tools</strong></h3>
@@ -76,8 +76,8 @@ function About() {
 
             <section className="about-section">
                 <h2>EXPERIENCE</h2>
-
-                <div className="skills-grid">
+                {/* 👉 별도 grid 클래스 사용 */}
+                <div className="experience-grid">
                     <div className="skill-card">
                         <h3>Data Analyst, Platform Strategy Team</h3>
                         <p className="experience-date">
