@@ -120,9 +120,7 @@
 
 /* 모바일 (최대 767px) */
 @media (max-width: 767px) {
-  .projects-page {
-  }
-
+  
   .project-row {
     flex-direction: column; 
     text-align: left;
@@ -141,8 +139,6 @@
 
 /* 태블릿 작은 구간 (768px ~ 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .projects-page {
-  }
 
   .project-row {
     flex-direction: column;
@@ -162,9 +158,7 @@
 
 /* 태블릿 큰 구간 (992px ~ 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
-  .projects-page {
-  }
-
+  
   .project-row {
     flex-direction: column;
     text-align: left;
@@ -183,9 +177,7 @@
 
 /* PC (1200px 이상) */
 @media (min-width: 1200px) {
-  .projects-page {
-  }
-
+  
   .project-row {
     flex-direction: row;
     text-align: left;
