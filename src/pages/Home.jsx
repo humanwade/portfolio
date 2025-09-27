@@ -10,7 +10,7 @@ function Home() {
             </div>
             <div className="home-text">
                 <h1>WELCOME !</h1>
-                <h2>I'M Seounghoon (Wade) Jung</h2>
+                <h2>I'm Seounghoon (Wade) Jung</h2>
                 <p>
                     Junior Software Engineer passionate about creating <br />
                     <strong>scalable web applications</strong> and <strong>responsive user experiences</strong>.

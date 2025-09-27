@@ -130,7 +130,7 @@
   justify-content: center;
 }
 
-/* 모바일 (최대 767px) */
+/* mobile (max 767px) */
 @media (max-width: 767px) {
   .about-header {
     flex-direction: column;
@@ -155,12 +155,12 @@
     justify-content: center;
   }
 
-  /* Technical Skills - 1칸 */
+  /* Technical Skills - 1 row */
   .skills-grid {
     grid-template-columns: repeat(1, minmax(280px, 320px));
   }
 
-  /* Experience - 1칸, 모바일에서는 크기를 줄임 */
+  /* Experience - 1row, be smaller when using mobile */
   .experience-grid {
     grid-template-columns: repeat(1, minmax(280px, 320px));
   }
@@ -178,10 +178,10 @@
 }
 
 
-/* 태블릿 작은 구간 (768px ~ 991px) */
+/* smaller tablet (768px ~ 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .about-header {
-    flex-direction: column; /* 모바일처럼 중앙 */
+    flex-direction: column; 
     text-align: center;
   }
 
@@ -198,7 +198,7 @@
   }
 }
 
-/* 태블릿 큰 구간 (992px ~ 1199px) */
+/* bitter tablet (992px ~ 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
   .about-header {
     flex-direction: row; 
@@ -219,7 +219,7 @@
   }
 }
 
-/* PC (1200px 이상) */
+/* PC (1200px more) */
 @media (min-width: 1200px) {
   .about-header {
     flex-direction: row; 

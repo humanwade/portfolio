@@ -2,8 +2,7 @@
   background-color: #111;
   color: white;
   min-height: 100vh;
-  padding: 3rem 2rem;
-  padding-right: 80px; 
+  padding: 3rem 2rem;  
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -36,8 +35,10 @@
   margin: 0 auto 2rem auto;
   gap: 2rem;
   transition: all 0.3s ease;
-  max-width: 1100px;
-  width: 100%;
+
+  max-width: 1100px;  
+  width: 100%;       
+  box-sizing: border-box; 
 }
 
 .project-row:hover {
@@ -118,9 +119,8 @@
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-/* 모바일 (최대 767px) */
+/* mobile (max 767px) */
 @media (max-width: 767px) {
-  
   .project-row {
     flex-direction: column; 
     text-align: left;
@@ -137,9 +137,8 @@
   }
 }
 
-/* 태블릿 작은 구간 (768px ~ 991px) */
+/* smaller tablet (768px ~ 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-
   .project-row {
     flex-direction: column;
     text-align: left;
@@ -156,9 +155,8 @@
   }
 }
 
-/* 태블릿 큰 구간 (992px ~ 1199px) */
+/* bigger tablet (992px ~ 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
-  
   .project-row {
     flex-direction: column;
     text-align: left;
@@ -175,9 +173,8 @@
   }
 }
 
-/* PC (1200px 이상) */
+/* PC (over 1200px) */
 @media (min-width: 1200px) {
-  
   .project-row {
     flex-direction: row;
     text-align: left;
