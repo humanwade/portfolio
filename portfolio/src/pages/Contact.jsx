@@ -6,6 +6,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Contact.css";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
     const navigate = useNavigate();
