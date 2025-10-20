@@ -28,11 +28,29 @@ function Contact() {
     };
 
     // Handle form submission
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();               // Prevent page reload
+    //     console.log("Form submitted", form);  // Debug log
+    //     alert("Thank you for your message!"); // Feedback to user
+    //     navigate("/");                        // Redirect to home page
+    // };
+
     const handleSubmit = (event) => {
-        event.preventDefault();               // Prevent page reload
-        console.log("Form submitted", form);  // Debug log
-        alert("Thank you for your message!"); // Feedback to user
-        navigate("/");                        // Redirect to home page
+        event.preventDefault();
+
+        emailjs.sendForm(
+            "service_65ap7uq",     //service ID
+            "template_nev8jyd",    //template ID
+            event.target,
+            "WZN4PCGKQVm4mikWW"      //Public Key
+        ).then((result) => {
+            console.log("SUCCESS!", result.text);
+            alert("Thank you for your message!");
+            navigate("/");
+        }, (error) => {
+            console.error("FAILED...", error.text);
+            alert("Sorry, failed to send message.");
+        });
     };
 
     return (
@@ -57,51 +75,51 @@ function Contact() {
             <form className="contact-form" onSubmit={handleSubmit}>
                 {/* Row for first and last name */}
                 <div className="form-row">
-                    <input 
-                        type="text" 
-                        name="firstName" 
-                        placeholder="First Name" 
-                        value={form.firstName} 
-                        onChange={handleChange} 
-                        required 
+                    <input
+                        type="text"
+                        name="firstName"
+                        placeholder="First Name"
+                        value={form.firstName}
+                        onChange={handleChange}
+                        required
                     />
-                    <input 
-                        type="text" 
-                        name="lastName" 
-                        placeholder="Last Name" 
-                        value={form.lastName} 
-                        onChange={handleChange} 
-                        required 
+                    <input
+                        type="text"
+                        name="lastName"
+                        placeholder="Last Name"
+                        value={form.lastName}
+                        onChange={handleChange}
+                        required
                     />
                 </div>
 
                 {/* Row for contact number and email */}
                 <div className="form-row">
-                    <input 
-                        type="text" 
-                        name="contact" 
-                        placeholder="Contact Number" 
-                        value={form.contact} 
-                        onChange={handleChange} 
-                        required 
+                    <input
+                        type="text"
+                        name="contact"
+                        placeholder="Contact Number"
+                        value={form.contact}
+                        onChange={handleChange}
+                        required
                     />
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="Email Address" 
-                        value={form.email} 
-                        onChange={handleChange} 
-                        required 
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        value={form.email}
+                        onChange={handleChange}
+                        required
                     />
                 </div>
 
                 {/* Message field */}
-                <textarea 
-                    name="message" 
-                    placeholder="Your Message" 
-                    value={form.message} 
-                    onChange={handleChange} 
-                    required 
+                <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    value={form.message}
+                    onChange={handleChange}
+                    required
                     rows="4"
                 ></textarea>
 
