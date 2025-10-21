@@ -63,7 +63,10 @@ function Contact() {
             {/* Contact Info Section */}
             <div className="contact-info">
                 <p><strong>📞 Phone:</strong> 647-217-7377</p>
-                <p><strong>📧 Email:</strong> wadeseounghoon@gmail.com</p>
+                <p>
+                    <strong>📧 Email:</strong>
+                    <a href="mailto:seounghoon.wade@gmail.com"> seounghoon.wade@gmail.com</a>
+                </p>
                 <p>
                     <strong>🔗 LinkedIn:</strong>
                     <a href="https://linkedin.com/in/seounghoonjung" target="_blank" rel="noopener noreferrer">
