@@ -7,8 +7,7 @@ It combines a modern **React (Vite)** front-end with a **Node/Express + MongoDB*
 ---
 
 ## 🚀 Live Demo
-🔗 **Frontend (React + Vite):** [http://132.145.108.97:5173](http://132.145.108.97:5173)  
-🔗 **Backend API (Express + MongoDB):** [http://132.145.108.97:3000](http://132.145.108.97:3000)
+🔗 [**My Portfolio**](http://132.145.108.97:3000) 
 
 > ⚙️ Hosted on Oracle Cloud Compute (Ubuntu 24.04) using Nginx reverse proxy + PM2
 
