@@ -1,7 +1,6 @@
 // Services.jsx
-// This component displays the "Services" page of the portfolio site.
-// It outlines the different areas of expertise (Web Development, APIs, Data Analysis, Automation, etc.)
-// and provides a clear overview of the services offered with icons and descriptions.
+// Portfolio "Services" (Expertise) page for Seounghoon (Wade) Jung.
+// Highlights key areas of technical proficiency and development focus.
 
 import "./Services.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,80 +9,78 @@ import {
     faDatabase, 
     faChartBar, 
     faCogs, 
-    faProjectDiagram 
+    faCloud 
 } from "@fortawesome/free-solid-svg-icons";
 
 function Services() {
     return (
         <div className="services-page">
             {/* Section Title */}
-            <h1 className="title">Services</h1>
+            <h1 className="title">EXPERTISE</h1>
             <div className="services-divider"></div>
-            
-            {/* Introductory text about services */}
+
+            {/* Introductory Text */}
             <p className="services-intro">
-                I provide a range of development and analysis services using my skills in 
-                full-stack development, data, and automation.  
-                My goal is to deliver efficient, scalable, and user-friendly solutions tailored to client needs.
+                As a <strong>Co-op Software Engineer</strong>, I specialize in full-stack web development,
+                <br/>API integration, and cloud deployment. <br />
+                I aim to build intelligent, scalable systems that combine performance, usability, and clean design.
             </p>
-            
-            {/* Service cards container */}
+
+            {/* Expertise Cards */}
             <div className="services-grid">
-                
-                {/* Service 1: Web Application Development */}
+                {/* 1. Full-Stack Web Development */}
                 <div className="service-card">
                     <FontAwesomeIcon icon={faCode} className="service-icon" />
-                    <h3>Web Application Development</h3>
+                    <h3>Full-Stack Web Development</h3>
                     <p>
-                        I build responsive and scalable web applications using <strong>React</strong> 
-                        and <strong>Node.js</strong>. <br />
-                        My focus is on clean and intuitive UI/UX. <br />
-                        Applications are optimized for both desktop and mobile users.
+                        Experienced in building responsive and data-driven web applications using
+                        <strong> React</strong>, <strong>Node.js</strong>, and <strong>Spring Boot</strong>. <br />
+                        Focused on modular structure, RESTful API integration, and optimized user experience.
                     </p>
                 </div>
 
-                {/* Service 2: API & Database Development */}
+                {/* 2. API & Database Engineering */}
                 <div className="service-card">
                     <FontAwesomeIcon icon={faDatabase} className="service-icon" />
-                    <h3>API & Database Development</h3>
+                    <h3>API & Database Engineering</h3>
                     <p>
-                        I design and implement RESTful APIs using <strong>Express</strong> 
-                        or <strong>Spring Boot</strong>. <br />
-                        Database solutions include <strong>SQL</strong> and <strong>NoSQL</strong>. <br />
-                        I ensure secure and efficient data management.
+                        Skilled in designing secure REST APIs with <strong>Express</strong> and <strong>Spring Boot</strong>. <br />
+                        Manage <strong>MySQL</strong>, <strong>Oracle</strong>, and <strong>MongoDB</strong> databases for scalable storage
+                        and efficient data flow across systems.
                     </p>
                 </div>
 
-                {/* Service 3: Data Analysis & Visualization */}
+                {/* 3. AI Integration & Data Analysis */}
                 <div className="service-card">
                     <FontAwesomeIcon icon={faChartBar} className="service-icon" />
-                    <h3>Data Analysis & Visualization</h3>
+                    <h3>AI Integration & Data Analysis</h3>
                     <p>
-                        I transform raw data into actionable insights with <strong>Python</strong> and <strong>SQL</strong>. <br />
-                        Visual reports are built using Looker Studio and charting tools. <br />
-                        My work supports informed business decisions.
+                        Integrated <strong>TensorFlow</strong> models through <strong>Flask</strong> microservices
+                        for intelligent data recognition and automation. <br />
+                        Utilize <strong>Python</strong> and visualization tools (Chart.js, Looker Studio)
+                        to support data-driven decision-making.
                     </p>
                 </div>
 
-                {/* Service 4: Automation & Optimization */}
+                {/* 4. Automation & System Optimization */}
                 <div className="service-card">
                     <FontAwesomeIcon icon={faCogs} className="service-icon" />
-                    <h3>Automation & Optimization</h3>
+                    <h3>Automation & System Optimization</h3>
                     <p>
-                        I streamline repetitive tasks with automation scripts. <br />
-                        My solutions improve productivity and reduce human error. <br />
-                        Workflows are optimized for efficiency and cost savings.
+                        Automate repetitive workflows using <strong>Python</strong> and <strong>Shell scripting</strong>. <br />
+                        Enhance backend reliability with <strong>PM2</strong>, <strong>Nginx</strong>, and optimized
+                        build pipelines for continuous deployment.
                     </p>
                 </div>
 
-                {/* Service 5: Full-Stack Project Support */}
+                {/* 5. Cloud Deployment & DevOps */}
                 <div className="service-card">
-                    <FontAwesomeIcon icon={faProjectDiagram} className="service-icon" />
-                    <h3>Full-Stack Project Support</h3>
+                    <FontAwesomeIcon icon={faCloud} className="service-icon" />
+                    <h3>Cloud Deployment & DevOps</h3>
                     <p>
-                        I provide end-to-end development support for projects. <br />
-                        This includes front-end, back-end, and deployment pipelines. <br />
-                        Collaboration ensures smooth delivery of solutions.
+                        Deployed multiple full-stack systems on <strong>Oracle Cloud (Ubuntu)</strong> using
+                        process managers, SSL, and domain routing. <br />
+                        Focused on scalable, maintainable, and secure production environments.
                     </p>
                 </div>
             </div>

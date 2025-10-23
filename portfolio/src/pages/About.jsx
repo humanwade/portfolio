@@ -1,12 +1,10 @@
 // About.jsx
-// This component renders the "About Me" page of the portfolio website.
-// It introduces the user (profile photo, resume link), lists technical skills, 
-// and provides professional experience details. 
-// The layout is styled via About.css and uses responsive design for different devices.
+// Portfolio "About Me" page for Seounghoon (Wade) Jung.
+// Updated for Co-op Software Engineer profile with accurate tech stack and real experience.
 
 import "./About.css";
-import profileMain from "../assets/profileMain.jpg";   // Profile photo
-import resumeFile from "../assets/resume.pdf";         // Resume PDF file
+import profileMain from "../assets/profileMain.jpg";
+import resumeFile from "../assets/Seounghoon_Jung_Resume.pdf";
 
 function About() {
     return (
@@ -15,22 +13,20 @@ function About() {
             {/* Page Title */}
             <h1 className="title">ABOUT ME</h1>
 
-            {/* Header Section: Photo + Intro */}
+            {/* Header Section */}
             <div className="about-header">
                 <div className="about-photo">
-                    {/* Profile image */}
                     <img src={profileMain} alt="Seounghoon Jung" />
                 </div>
 
                 <div className="about-intro">
-                    {/* Short professional headline */}
                     <p className="headline">
-                        Results-driven <strong>Junior Software Engineer</strong> with hands-on experience in <br />
-                        JavaScript, React, and Node.js, specializing in scalable web applications
-                        and responsive UI/UX.
+                        A <strong>Co-op Software Engineer</strong> passionate about developing intelligent,
+                        full-stack web applications that combine clean design with practical functionality.
+                        Experienced in <strong>Spring Boot, React, Node.js, Flask</strong>, and <strong>MySQL</strong>,
+                        with hands-on deployment on <strong>Oracle Cloud</strong>.
                     </p>
 
-                    {/* Resume button */}
                     <div className="resume-button">
                         <a href={resumeFile} target="_blank" rel="noreferrer">
                             View My Resume
@@ -39,90 +35,80 @@ function About() {
                 </div>
             </div>
 
-            {/* Technical Skills Section */}
+            {/* Technical Skills */}
             <section className="about-section">
                 <h2>TECHNICAL SKILLS</h2>
 
-                {/* Grid layout for skills categories */}
                 <div className="skills-grid">
-                    {/* Languages and Tools */}
                     <div className="skill-card">
-                        <h3><strong>Languages / Tools</strong></h3>
+                        <h3><strong>Languages</strong></h3>
                         <ul>
-                            <li>C#</li>
                             <li>Java</li>
-                            <li>Python</li>
                             <li>JavaScript</li>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>React</li>
-                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>C#</li>
                         </ul>
                     </div>
 
-                    {/* Frameworks */}
                     <div className="skill-card">
                         <h3><strong>Frameworks</strong></h3>
                         <ul>
-                            <li>Spring Boot</li>
-                            <li>Spring MVC/REST</li>
+                            <li>Spring Boot / Spring MVC</li>
+                            <li>React</li>
+                            <li>Node.js / Express.js</li>
+                            <li>Flask</li>
                             <li>MyBatis</li>
-                            <li>Hibernate</li>
                         </ul>
                     </div>
 
-                    {/* Databases */}
                     <div className="skill-card">
                         <h3><strong>Databases</strong></h3>
                         <ul>
-                            <li>Oracle</li>
                             <li>MySQL</li>
+                            <li>Oracle</li>
                             <li>MongoDB</li>
                         </ul>
                     </div>
 
-                    {/* Other Tools */}
                     <div className="skill-card">
-                        <h3><strong>Other</strong></h3>
+                        <h3><strong>DevOps & Tools</strong></h3>
                         <ul>
-                            <li>Git</li>
-                            <li>GitHub</li>
-                            <li>Apache Tomcat</li>
-                            <li>Express.js</li>
+                            <li>Git / GitHub</li>
+                            <li>Oracle Cloud (Ubuntu)</li>
+                            <li>PM2 / Nginx / WAR Deployment</li>
+                            <li>Postman / Linux / Agile-Scrum</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            {/* Professional Experience Section */}
+            {/* Professional Experience */}
             <section className="about-section">
                 <h2>EXPERIENCE</h2>
 
                 <div className="experience-grid">
-                    {/* Job 1 */}
+                    {/* Previous Work Experience */}
                     <div className="skill-card">
-                        <h3>Data Analyst, Platform Strategy Team</h3>
+                        <h3>Data Analyst – Platform Strategy Team</h3>
                         <p className="experience-date">
-                            <em>Medium Inc., South Korea (Sept 2022 - Dec 2023)</em>
+                            <em>Medium Inc., South Korea (Sept 2022 – Dec 2023)</em>
                         </p>
                         <ul>
-                            <li>Conducted data analysis using MySQL, Python, and Looker Studio to evaluate user engagement</li>
-                            <li>Performed QA testing and collaborated with developers to fix UI/UX issues</li>
-                            <li>Boosted monthly active users by 110% with 21,000+ new users acquired</li>
-                            <li>Improved CS tools by creating an ad-hoc query system enabling same-day responses</li>
+                            <li>Analyzed user behavior data using MySQL and Python to guide product decisions.</li>
+                            <li>Collaborated with developers and QA engineers to improve UI/UX efficiency.</li>
+                            <li>Increased monthly active users by 110% through targeted product improvements.</li>
                         </ul>
                     </div>
 
-                    {/* Job 2 */}
                     <div className="skill-card">
-                        <h3>Procurement Specialist, International Procurement Team</h3>
+                        <h3>Procurement Specialist – International Team</h3>
                         <p className="experience-date">
-                            <em>Chunghak F&C, South Korea (Jul 2019 - Sept 2022)</em>
+                            <em>Chunghak F&C, South Korea (Jul 2019 – Sept 2022)</em>
                         </p>
                         <ul>
-                            <li>Automated Excel inventory tracking, reducing excess inventory by 7% monthly</li>
-                            <li>Analyzed sales data to achieve 12% cost savings via vendor negotiations</li>
-                            <li>Awarded <strong>Outstanding Employee (Mar 2021)</strong> for cost reduction efforts</li>
+                            <li>Improved procurement workflow and reduced excess inventory by 7% monthly.</li>
+                            <li>Led cost-saving negotiations with overseas vendors and suppliers.</li>
+                            <li>Awarded <strong>Outstanding Employee (Mar 2021)</strong> for performance and collaboration.</li>
                         </ul>
                     </div>
                 </div>

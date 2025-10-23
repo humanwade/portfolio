@@ -1,7 +1,6 @@
 // Home.jsx
-// This component renders the Home (landing) page of the portfolio.
-// It introduces the developer (Seounghoon Jung) with a profile image, 
-// a short professional summary, and a button to navigate to the About page.
+// Landing page introducing Seounghoon (Wade) Jung – a Co-op Software Engineer.
+// Highlights full-stack and AI integration experience with a professional tone.
 
 import { Link } from "react-router-dom";
 import "./Home.css";
@@ -18,21 +17,28 @@ function Home() {
             {/* Right Section: Introduction Text */}
             <div className="home-text">
                 {/* Main greeting */}
-                <h1>WELCOME !</h1>
+                <h1>WELCOME!</h1>
 
                 {/* Developer’s name */}
                 <h2>I'm Seounghoon (Wade) Jung</h2>
 
-                {/* Short professional description */}
+                {/* Professional summary */}
                 <p>
-                    Junior Software Engineer passionate about creating <br />
-                    <strong>scalable web applications</strong> and <strong>responsive user experiences</strong>.
+                    A <strong>Co-op Software Engineer</strong> passionate about building intelligent,<br/>
+                    full-stack web applications that combine clean design with practical functionality.
                 </p>
 
-                {/* Skills and areas of expertise */}
+                {/* Technical focus */}
                 <p>
-                    Skilled in JavaScript, React, Node.js, and C#, with hands-on project experience <br />
-                    in database design and cloud deployment.
+                    Experienced with <strong>Spring Boot, React, Node.js, and Flask</strong>,
+                    integrating <strong>AI models</strong>,<br/> and deploying scalable services
+                    on <strong>Oracle Cloud</strong>.
+                </p>
+
+                {/* Additional strengths */}
+                <p>
+                    Bringing strong <strong>data analysis</strong>, <strong>problem-solving</strong>,
+                    and <strong>cross-functional collaboration</strong> skills<br/> to every project.
                 </p>
 
                 {/* Location and education */}
