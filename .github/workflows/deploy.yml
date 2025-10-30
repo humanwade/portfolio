@@ -1,0 +1,51 @@
+# .github/workflows/deploy.yml
+
+name: Deploy to Raspberry Pi via SSH
+
+on:
+  push:
+    branches:
+      - main # main 브랜치에 push할 때마다 실행
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up SSH
+        # 등록한 개인 키(SSH_PRIVATE_KEY)를 사용하여 SSH 접속 환경 설정
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deployment script execution
+        # SSH 접속을 시도하고, 라즈베리파이에서 명령어 실행
+        # (IP 주소 대신 SSH_HOST Secret을 사용합니다.)
+        run: |
+          # StrictHostKeyChecking=no 는 최초 접속 시 확인 질문을 건너뛰게 합니다.
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+
+            echo "Starting deployment on Raspberry Pi..."
+
+            # 1. 서버 폴더로 이동 (프로젝트 루트)
+            cd /home/pi/MyPortfolio
+
+            # 2. 최신 코드 Pull
+            git pull origin main
+
+            # 3. 프론트엔드 종속성 설치 및 빌드
+            echo "Building frontend..."
+            cd portfolio
+            npm install
+            npm run build
+            cd .. # ~/MyPortfolio로 돌아옴
+
+            # 4. PM2로 메인 서버 재시작
+            echo "Restarting Node.js server..."
+            pm2 restart portfolio
+
+            echo "Deployment finished successfully."
+          EOF

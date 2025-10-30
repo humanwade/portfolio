@@ -4,12 +4,13 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 
-const basename = import.meta.env.MODE === "production" ? "/portfolio" : "/";
+// ➡️ production일 때는 '/portfolio'를 사용하고, dev일 때는 '/'를 사용합니다.
+const basename = import.meta.env.MODE === "production" ? "/portfolio" : "/"; 
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter basename={basename}>
-      <App />
-    </BrowserRouter>
-  </StrictMode>
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
 );
