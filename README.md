@@ -9,7 +9,7 @@ Originally deployed on **Oracle Cloud Compute**, the application has since been 
 ---
 
 ## 🚀 Live Demo
-🔗 **[MyPortfolio : portfolio.wadeverse.net](http://portfolio.wadeverse.net)**
+🔗 **[MyPortfolio](http://portfolio.wadeverse.net)**
 
 > ⚙️ Hosted on a **Raspberry Pi 5 (Ubuntu 24.04)** running **Nginx reverse proxy + PM2** for production-grade process and service management.
 
