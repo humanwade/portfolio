@@ -80,14 +80,14 @@ function Projects() {
         {/* Image / Live Demo Link */}
         <div className="project-image">
           <a
-            href="http://132.145.108.97:8080/"
+            href="https://health.wadeverse.net/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={caloriesCut} alt="Calories Cut Screenshot" />
           </a>
           <a
-            href="http://132.145.108.97:8080/"
+            href="https://health.wadeverse.net/"
             target="_blank"
             rel="noreferrer"
             className="project-link"
@@ -151,14 +151,14 @@ function Projects() {
         {/* Image + Live Demo Link */}
         <div className="project-image">
           <a
-            href="http://132.145.108.97:5001/"
+            href="https://wadechat.wadeverse.net/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src={chatApp} alt="Real-time Chat Application Screenshot" />
           </a>
           <a
-            href="http://132.145.108.97:5001/"
+            href="https://wadechat.wadeverse.net/"
             target="_blank"
             rel="noreferrer"
             className="project-link"

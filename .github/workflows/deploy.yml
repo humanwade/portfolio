@@ -26,7 +26,7 @@ jobs:
         # (IP 주소 대신 SSH_HOST Secret을 사용합니다.)
         run: |
           # StrictHostKeyChecking=no 는 최초 접속 시 확인 질문을 건너뛰게 합니다.
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
 
             echo "Starting deployment on Raspberry Pi..."
 
