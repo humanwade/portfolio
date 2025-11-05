@@ -20,9 +20,9 @@ jobs:
 
       - name: Deploy to Oracle VM
         run: |
-          echo "🔐 Connecting to Oracle VM..."
+          echo "Connecting to Oracle VM..."
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            echo "✅ Connected to Oracle VM"
+            echo "Connected to Oracle VM"
 
             # Pi 배포 수행
             echo "Deploying to Raspberry Pi..."
