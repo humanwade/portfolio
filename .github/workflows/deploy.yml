@@ -20,6 +20,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies and build
+        working-directory: ./portfolio
         run: |
           npm install
           npm run build
@@ -53,7 +54,7 @@ jobs:
           scp -o StrictHostKeyChecking=no \
               -o ProxyCommand="cloudflared access ssh --hostname %h" \
               -i /tmp/deploy_key -r dist/* \
-              ${SSH_USER}@${SSH_HOST}:/home/pi/MyPortfolio/
+              ${SSH_USER}@${SSH_HOST}:/home/pi/MyPortfolio/portfolio/
 
       - name: Restart Portfolio App
         env:
