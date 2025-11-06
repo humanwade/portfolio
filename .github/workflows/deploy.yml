@@ -47,6 +47,7 @@ jobs:
           chmod 600 /tmp/deploy_key
 
       - name: Transfer build files to Raspberry Pi
+        working-directory: ./portfolio
         env:
           SSH_USER: pi
           SSH_HOST: ssh.wadeverse.net
